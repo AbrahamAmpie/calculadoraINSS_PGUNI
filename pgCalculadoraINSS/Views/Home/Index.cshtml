@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-2 centrar-vertical centrar-texto">
+            <label for="txtSalario" class="col-form-label">Salario Bruto</label>
+        </div>
+        <div class="col-4 centrar-vertical">
+            <input id="txtSalario" type="text" class="form-control" placeholder="Salario Bruto">
+        </div>
+        <div class="col-3">
+            <button id="btnCalcular" type="button" class="btn btn-success btn-block my-2">Calcular</button>
+        </div>
+        <div class="col-3">
+            <button id="btnLimpiar" type="button" class="btn btn-danger btn-block my-2">Limpiar</button>
+        </div>
+    </div>
+    <div id="SeccionResultados" class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Proceso</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Renta Mensual</th>
+                        <th>
+                            <label id="lblRentaMensual" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(-) INSS Laboral</th>
+                        <th>
+                            <label id="lblINSSLaboral" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(=) Base Imponible</th>
+                        <th>
+                            <label id="lblBaseImponible" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(x12) Expectativa Anual</th>
+                        <th>
+                            <label id="lblExpectativaAnual" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(-) Exceso</th>
+                        <th>
+                            <label id="lblExceso" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(=)</th>
+                        <th>
+                            <label id="lblAnualSinExceso" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(%) Porcentaje</th>
+                        <th>
+                            <label id="lblPorcentaje" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(+) Impuesto Base</th>
+                        <th>
+                            <label id="lblImpuestoBase" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(=) IR Anual</th>
+                        <th>
+                            <label id="lblIRAnual" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(÷12) IR Mensual</th>
+                        <th>
+                            <label id="lblIRMensual" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>(÷30) IR Diario</th>
+                        <th>
+                            <label id="lblIRDiario" class="form-label"></label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Salario Neto Mensual</th>
+                        <th>
+                            <label id="lblSalarioNeto" class="form-label"></label>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/index.js"></script>
+}
